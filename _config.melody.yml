@@ -204,7 +204,7 @@ addThis:
 gitment:
   enable: true
   owner: "midotype"
-  repo: "midotype.github.io"
+  repo: "https://github.com/midotype/midotype.github.io"
   client_id: "915a48a0927c08561b8b"
   client_secret: "3a488aa7a8ebeb55b7b2cadc7c49aebafafb6b83"
 
@@ -222,18 +222,6 @@ ICP:
 busuanzi:
   # count values only if the other configs are false
   enable: false
-  # custom uv span for the whole site
-  site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
-  site_uv_footer:
-  # custom pv span for the whole site
-  site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
-  site_pv_footer:
-  # custom pv span for one page only
-  page_pv: true
-  page_pv_header: <i class="fa fa-file"></i>
-  page_pv_footer:
 
 # canvas_ribbon
 # See: https://github.com/hustcc/ribbon.js
