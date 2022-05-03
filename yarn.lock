@@ -845,15 +845,10 @@
     "picocolors" "^1.0.0"
     "serve-static" "^1.14.1"
 
-"hexo-theme-landscape@^0.0.3":
-  "integrity" "sha512-b0Di+TUVs4ESrNX4ULEh9uQmADpO6kr10rIJ2OGZM8suNQNFKdxn+vJUjnLfKkCPJAfVmS7/S83KCNYe4tpoNw=="
-  "resolved" "https://registry.yarnpkg.com/hexo-theme-landscape/-/hexo-theme-landscape-0.0.3.tgz"
-  "version" "0.0.3"
-
-"hexo-theme-melody@^1.9.0":
-  "integrity" "sha512-4F0Zk6K5r71nN2hjfkJqs4/oX/9sPRopMNpLxGblxwqxHsoigr2YxDfunpSVu6pe/GIs+HbHxi5T1UthzTGAuQ=="
-  "resolved" "https://registry.npmjs.org/hexo-theme-melody/-/hexo-theme-melody-1.9.0.tgz"
-  "version" "1.9.0"
+"hexo-theme-leedom@^1.0.1":
+  "integrity" "sha512-j8a66+QkdTgN3wnfKE8miwo/6MNmXZk2NpqdLKw7Mv7qo6DSJ3e9NbLpQyHKBW2adr1psjNx5lZWxwIJgUL6Uw=="
+  "resolved" "https://registry.npmjs.org/hexo-theme-leedom/-/hexo-theme-leedom-1.0.1.tgz"
+  "version" "1.0.1"
 
 "hexo-util@^2.0.0", "hexo-util@^2.1.0", "hexo-util@^2.5.0", "hexo-util@^2.6.0":
   "integrity" "sha512-sLG45foxXMnMgCo3FpP4Sicj5nLD6ezO46+DKP01BWj1CfNq2pYoUdJacfeVbKc+oFtitRcNIGsPNNt3pVbzdg=="
