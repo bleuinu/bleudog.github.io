@@ -6,7 +6,7 @@
   <link href="https://midotype.github.io/atom.xml" rel="self"/>
   
   <link href="https://midotype.github.io/"/>
-  <updated>2022-05-03T01:58:33.411Z</updated>
+  <updated>2022-05-03T05:09:13.674Z</updated>
   <id>https://midotype.github.io/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git-filter-repo</title>
+    <link href="https://midotype.github.io/ko-git-filter-repo/"/>
+    <id>https://midotype.github.io/ko-git-filter-repo/</id>
+    <published>2022-05-03T04:45:35.000Z</published>
+    <updated>2022-05-03T05:09:13.674Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;git history에서 author 정보를 바꾸기 위해 상당히 번거로운 과정들이 필요하다 (&lt;a href=&quot;/ko-change-author-of-commit-in-git-history/&quot;&gt;커밋의 author 수정하기&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;뿐만</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://midotype.github.io/categories/Git/"/>
+    
+    
+    <category term="git" scheme="https://midotype.github.io/tags/git/"/>
+    
+    <category term="git-filter-repo" scheme="https://midotype.github.io/tags/git-filter-repo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Change Author of Commit in Git History</title>
+    <link href="https://midotype.github.io/ko-change-author-of-commit-in-git-history/"/>
+    <id>https://midotype.github.io/ko-change-author-of-commit-in-git-history/</id>
+    <published>2022-05-03T03:35:14.000Z</published>
+    <updated>2022-05-03T04:46:13.301Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;깃 리포지토리에서 아래의 명령어를 사용하여 이름과 이메일을 설정할 수 있다.&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ git</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://midotype.github.io/categories/Git/"/>
+    
+    
+    <category term="git" scheme="https://midotype.github.io/tags/git/"/>
+    
+    <category term="filter-branch" scheme="https://midotype.github.io/tags/filter-branch/"/>
+    
+  </entry>
   
   <entry>
     <title>error: gpg failed to sign</title>
@@ -38,9 +94,9 @@
     <category term="Git" scheme="https://midotype.github.io/categories/Git/"/>
     
     
-    <category term="gpg" scheme="https://midotype.github.io/tags/gpg/"/>
-    
     <category term="git" scheme="https://midotype.github.io/tags/git/"/>
+    
+    <category term="gpg" scheme="https://midotype.github.io/tags/gpg/"/>
     
     <category term="error" scheme="https://midotype.github.io/tags/error/"/>
     
@@ -67,9 +123,9 @@
     <category term="Git" scheme="https://midotype.github.io/categories/Git/"/>
     
     
-    <category term="gpg" scheme="https://midotype.github.io/tags/gpg/"/>
-    
     <category term="git" scheme="https://midotype.github.io/tags/git/"/>
+    
+    <category term="gpg" scheme="https://midotype.github.io/tags/gpg/"/>
     
   </entry>
   
@@ -232,9 +288,9 @@
     
     <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
     
-    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
-    
     <category term="math" scheme="https://midotype.github.io/tags/math/"/>
+    
+    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
     
     <category term="string" scheme="https://midotype.github.io/tags/string/"/>
     

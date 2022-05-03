@@ -11,8 +11,8 @@
   
   <title>
     
-      Tag 
-       : bruteforce
+      Change Author of Commit in Git History 
+      
       
     
   </title>
@@ -33,6 +33,10 @@
 
 
   
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
 
   
 
@@ -83,229 +87,86 @@
 
 
       <div class="main">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2022</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="git-filter-repo">
-        <div class="time-m-d">05-03</div>
-        <div class="title">
-          <a href="/ko-git-filter-repo/">
-            
-              <span>git-filter-repo</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Change Author of Commit in Git History">
-        <div class="time-m-d">05-03</div>
-        <div class="title">
-          <a href="/ko-change-author-of-commit-in-git-history/">
-            
-              <span>Change Author of Commit in Git History</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="error: gpg failed to sign">
-        <div class="time-m-d">04-05</div>
-        <div class="title">
-          <a href="/ko-gpg-failed-to-sign/">
-            
-              <span>error: gpg failed to sign</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="git commit 서명하기">
-        <div class="time-m-d">04-05</div>
-        <div class="title">
-          <a href="/ko-signing-commits/">
-            
-              <span>git commit 서명하기</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="GPG key 생성하기">
-        <div class="time-m-d">04-05</div>
-        <div class="title">
-          <a href="/ko-generate-new-gpg-key/">
-            
-              <span>GPG key 생성하기</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 11: 정렬 (Sorting)">
-        <div class="time-m-d">03-25</div>
-        <div class="title">
-          <a href="/boj/boj-steps-11/">
-            
-              <span>BOJ 11: 정렬 (Sorting)</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 10: 브루트포스 (Bruteforce) -- [4/5]">
-        <div class="time-m-d">03-24</div>
-        <div class="title">
-          <a href="/boj/boj-steps-10/">
-            
-              <span>BOJ 10: 브루트포스 (Bruteforce) -- [4/5]</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 09: 재귀 (Recursion) -- [3/4]">
-        <div class="time-m-d">03-23</div>
-        <div class="title">
-          <a href="/boj/boj-steps-9/">
-            
-              <span>BOJ 09: 재귀 (Recursion) -- [3/4]</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 06: 문자열 (Strings)">
-        <div class="time-m-d">03-21</div>
-        <div class="title">
-          <a href="/boj/boj-steps-6/">
-            
-              <span>BOJ 06: 문자열 (Strings)</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 05: 함수 (Functions)">
-        <div class="time-m-d">03-21</div>
-        <div class="title">
-          <a href="/boj/boj-steps-5/">
-            
-              <span>BOJ 05: 함수 (Functions)</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 04: 1차원 배열 (1-D Array)">
-        <div class="time-m-d">03-21</div>
-        <div class="title">
-          <a href="/boj/boj-steps-4/">
-            
-              <span>BOJ 04: 1차원 배열 (1-D Array)</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 03: 반복문 (Loops)">
-        <div class="time-m-d">03-21</div>
-        <div class="title">
-          <a href="/boj/boj-steps-3/">
-            
-              <span>BOJ 03: 반복문 (Loops)</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 02: 조건문 (Conditions)">
-        <div class="time-m-d">03-21</div>
-        <div class="title">
-          <a href="/boj/boj-steps-2/">
-            
-              <span>BOJ 02: 조건문 (Conditions)</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="BOJ 01: 입출력과 사칙연산 (STDIO & Arithmetic)">
-        <div class="time-m-d">03-21</div>
-        <div class="title">
-          <a href="/boj/boj-steps-1/">
-            
-              <span>BOJ 01: 입출력과 사칙연산 (STDIO & Arithmetic)</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Implement Mutable Array: Vector">
-        <div class="time-m-d">03-06</div>
-        <div class="title">
-          <a href="/en-implement-vector/">
-            
-              <span>Implement Mutable Array: Vector</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="파이썬으로 데이터 분석하기 - Numpy">
-        <div class="time-m-d">01-31</div>
-        <div class="title">
-          <a href="/ko-python-numpy/">
-            
-              <span>파이썬으로 데이터 분석하기 - Numpy</span>
-            
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="파이썬 기초 정리">
-        <div class="time-m-d">01-30</div>
-        <div class="title">
-          <a href="/ko-python-basic/">
-            
-              <span>파이썬 기초 정리</span>
-            
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2021</span>
-          </h2>
-        </div>
-      
-      <div class="post-item" title="Big-O記法とは">
-        <div class="time-m-d">05-03</div>
-        <div class="title">
-          <a href="/ja-algorithm-complexity/">
-            
-              <span>Big-O記法とは</span>
-            
-          </a>
-        </div>
-      </div>
-    
+<div class="post">
+  <h3 class="date">
+    May 03, 2022
+  </h3>
+  <h1>
+    Change Author of Commit in Git History
+  </h1>
+  <div class="content markdown-body">
+    <p>깃 리포지토리에서 아래의 명령어를 사용하여 이름과 이메일을 설정할 수 있다.</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git config user.name <span class="string">&quot;Mido Eu&quot;</span></span><br><span class="line">$ git config user.email <span class="string">&quot;mido.eu@proton.me&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>이렇게 설정한 이름과 이메일은 커밋 로그에서 확인 할 수 있다.</p>
+<p><img src="/images/posts/20220503-git-filter-repo1.png" alt="Git log"></p>
+<p>하지만 만약 설정하는 순간 오타가 났다거나 아니면 새로운 이메일로 업데이트 하는 걸 깜빡해서 예전의 정보를 사용했다면? </p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git config user.name <span class="string">&quot;Mid oEu&quot;</span></span><br><span class="line">$ git config user.email <span class="string">&quot;mido.eu@proteon.me&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>커밋 로그에는 일단 아래처럼 설정한 그대로 나타나게 된다.</p>
+<p><img src="/images/posts/20220503-git-filter-repo2.png" alt="Git log"></p>
+<p>뿐만 아니라 깃허브에서도 커밋을 확인해보면 사용자를 확인 할 수가 없어서 잔디 기록도 남지 않게 된다.</p>
+<p><img src="/images/posts/20220503-git-filter-repo3.png" alt="Github commit log"></p>
+<p>이를 해결하기 위해서는 author과 email을 재설정해주어야 한다.</p>
+<hr>
+<h2 id="커밋-checkout-하기"><a href="#커밋-checkout-하기" class="headerlink" title="커밋 checkout 하기"></a>커밋 checkout 하기</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --abbrev-commit</span><br></pre></td></tr></table></figure>
+
+<p>우선 잘못된 정보를 가진 커밋의 주소를 찾는다.</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">commit ba5066c (HEAD -&gt; main, origin/main, origin/HEAD)</span><br><span class="line">Author: Mid oEu &lt;mido.eu@proteon.me&gt;</span><br><span class="line">Date:   Tue May 3 13:08:41 2022 +0900</span><br><span class="line"></span><br><span class="line">    hello.c added</span><br><span class="line"></span><br><span class="line">commit c34fc66</span><br><span class="line">Author: Mido Eu &lt;mido.eu@proton.me&gt;</span><br><span class="line">Date:   Tue May 3 12:37:55 2022 +0900</span><br><span class="line"></span><br><span class="line">    author and email fixed</span><br></pre></td></tr></table></figure>
+
+<p>두 번째 커밋 (<code>c34fc66</code>)가 올바른 정보를 가지고 있고, 첫 번째 커밋(<code>ba5066c</code>)의 정보를 바꿔야한다.</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git checkout ba5066c</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line">HEAD is now at ba5066c hello.c added</span><br></pre></td></tr></table></figure>
+
+<h2 id="author-재설정-하기"><a href="#author-재설정-하기" class="headerlink" title="author 재설정 하기"></a>author 재설정 하기</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git commit --amend --author <span class="string">&quot;Mido Eu &lt;mido.eu@proton.me&gt;&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>해당 커밋이 완료되었다면 다시 메인 브랜치로 이동한다. 그러면 새로운 커밋의 브랜치(<code>81ef65b</code>)가 생성된 것을 확인 할 수 있다.</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># git checkout master</span></span><br><span class="line">$ git checkout main</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Warning: you are leaving 1 commit behind, not connected to</span><br><span class="line">any of your branches:</span><br><span class="line"></span><br><span class="line">  81ef65b hello.c added</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+
+<h2 id="이전-커밋을-새로운-커밋으로-replace"><a href="#이전-커밋을-새로운-커밋으로-replace" class="headerlink" title="이전 커밋을 새로운 커밋으로 replace"></a>이전 커밋을 새로운 커밋으로 replace</h2><p><code>81ef65b</code>가 author의 정보를 고친 새로운 커밋이기 때문에 이를 예전에 잘못된 정보를 가지고 있던 커밋(<code>ba5066c</code>)과 교체한다</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git replace ba5066c 81ef65b</span><br></pre></td></tr></table></figure>
+
+<p>그리고 <code>filter-branch</code>를 사용해서 고친 커밋 이후의 모든 커밋을 다시 커밋해준다.</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git filter-branch -- --all</span><br><span class="line"></span><br><span class="line">Proceeding with filter-branch...</span><br><span class="line"></span><br><span class="line">Rewrite ba5066c5dacd001f3ce3b5e691b6c0d2f81df2ac (4/4) (0 seconds passed, remaining 0 predicted)    </span><br><span class="line">Ref <span class="string">&#x27;refs/heads/main&#x27;</span> was rewritten</span><br><span class="line">Ref <span class="string">&#x27;refs/remotes/origin/main&#x27;</span> was rewritten</span><br><span class="line">WARNING: Ref <span class="string">&#x27;refs/remotes/origin/main&#x27;</span> is unchanged</span><br><span class="line">Ref <span class="string">&#x27;refs/replace/ba5066c5dacd001f3ce3b5e691b6c0d2f81df2ac&#x27;</span> was rewritten</span><br></pre></td></tr></table></figure>
+
+<h2 id="replacement-지우기"><a href="#replacement-지우기" class="headerlink" title="replacement 지우기"></a>replacement 지우기</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git replace -d ba5066c</span><br><span class="line"></span><br><span class="line">Deleted replace ref <span class="string">&#x27;ba5066c5dacd001f3ce3b5e691b6c0d2f81df2ac&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p><a target="_blank" rel="noopener" href="https://gist.github.com/zapidan/69c175416261d9a13fd4">https://gist.github.com/zapidan/69c175416261d9a13fd4</a></p>
+<h2 id="로그-확인-후-force-push"><a href="#로그-확인-후-force-push" class="headerlink" title="로그 확인 후 force push"></a>로그 확인 후 force push</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line"></span><br><span class="line">commit 63562c5 (HEAD -&gt; main, origin/main, origin/HEAD)</span><br><span class="line">Author: Mido Eu &lt;mido.eu@proton.me&gt;</span><br><span class="line">Date:   Tue May 3 13:08:41 2022 +0900</span><br><span class="line"></span><br><span class="line">    hello.c added</span><br><span class="line"></span><br><span class="line">commit c34fc66</span><br><span class="line">Author: Mido Eu &lt;mido.eu@proton.me&gt;</span><br><span class="line">Date:   Tue May 3 12:37:55 2022 +0900</span><br><span class="line"></span><br><span class="line">    author and email fixed</span><br></pre></td></tr></table></figure>
+
+<p>문제가 없다면 <code>-f</code> 태그를 사용해서 force push 한다.</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">$ git push -f</span><br></pre></td></tr></table></figure>
+
+<hr>
+<ul>
+<li><a href="/ko-signing-commits/">signed commit</a>을 사용하는 경우 해당 작업 종료 후 커밋이 unverified 될 수 있다. 예전 커밋에 서명하는 방법에 대해서는 ‘<a target="_blank" rel="noopener" href="https://medium.com/@midotype/signing-previous-commits-787a077bdb62">Signing Previous Commits</a>‘을 참고하자.</li>
+<li><code>git filter-branch</code>가 상당히 느리기 때문에 <a href="/ko-git-filter-repo/">git-filter-repo</a></li>
+</ul>
+
   </div>
+  
+    
+      <a id="older" class="blog-nav" href="/ko-gpg-failed-to-sign/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/ko-git-filter-repo/">&lt;&nbsp;NEWER</a>
+          
+            
 </div>
-
         <div class="footer">
   
     <div class="footer-more">
