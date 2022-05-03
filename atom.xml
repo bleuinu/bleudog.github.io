@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mido Ryu (劉謎道)</title>
+  <icon>https://midotype.github.io/icon.png</icon>
+  
+  <link href="https://midotype.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://midotype.github.io/"/>
+  <updated>2022-05-03T01:58:33.411Z</updated>
+  <id>https://midotype.github.io/</id>
+  
+  <author>
+    <name>Mido Ryu</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>error: gpg failed to sign</title>
+    <link href="https://midotype.github.io/ko-gpg-failed-to-sign/"/>
+    <id>https://midotype.github.io/ko-gpg-failed-to-sign/</id>
+    <published>2022-04-05T14:00:04.000Z</published>
+    <updated>2022-05-03T01:58:33.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;GPG key를 사용해서 &lt;a href=&quot;./ko-gpg-failed-to-sign.md&quot;&gt;커밋에 서명&lt;/a&gt;을 하는데 아래와 같은 오류가 발생했다.&lt;/p&gt;
+&lt;figure class=&quot;highlight sh&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://midotype.github.io/categories/Git/"/>
+    
+    
+    <category term="gpg" scheme="https://midotype.github.io/tags/gpg/"/>
+    
+    <category term="git" scheme="https://midotype.github.io/tags/git/"/>
+    
+    <category term="error" scheme="https://midotype.github.io/tags/error/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git commit 서명하기</title>
+    <link href="https://midotype.github.io/ko-signing-commits/"/>
+    <id>https://midotype.github.io/ko-signing-commits/</id>
+    <published>2022-04-05T13:20:15.000Z</published>
+    <updated>2022-05-03T01:58:33.412Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Signing-commits&quot;&gt;&lt;a href=&quot;#Signing-commits&quot; class=&quot;headerlink&quot; title=&quot;Signing commits&quot;&gt;&lt;/a&gt;Signing commits&lt;/h2&gt;&lt;p&gt;GPG key를 사용하여 커밋에</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://midotype.github.io/categories/Git/"/>
+    
+    
+    <category term="gpg" scheme="https://midotype.github.io/tags/gpg/"/>
+    
+    <category term="git" scheme="https://midotype.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GPG key 생성하기</title>
+    <link href="https://midotype.github.io/ko-generate-new-gpg-key/"/>
+    <id>https://midotype.github.io/ko-generate-new-gpg-key/</id>
+    <published>2022-04-05T12:11:01.000Z</published>
+    <updated>2022-05-03T01:58:33.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;gpg (GnuPG) 2.3.3&lt;/p&gt;
+&lt;h2 id=&quot;GPG-key-페어-생성&quot;&gt;&lt;a href=&quot;#GPG-key-페어-생성&quot; class=&quot;headerlink&quot; title=&quot;GPG key 페어 생성&quot;&gt;&lt;/a&gt;GPG key 페어</summary>
+        
+      
+    
+    
+    
+    <category term="Git" scheme="https://midotype.github.io/categories/Git/"/>
+    
+    
+    <category term="github" scheme="https://midotype.github.io/tags/github/"/>
+    
+    <category term="gpg" scheme="https://midotype.github.io/tags/gpg/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 11: 정렬 (Sorting)</title>
+    <link href="https://midotype.github.io/boj/boj-steps-11/"/>
+    <id>https://midotype.github.io/boj/boj-steps-11/</id>
+    <published>2022-03-25T13:33:46.000Z</published>
+    <updated>2022-05-03T01:58:33.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 11번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/9&quot;&gt;정렬&lt;/a&gt;의 풀이입니다.&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="sort" scheme="https://midotype.github.io/tags/sort/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 10: 브루트포스 (Bruteforce) -- [4/5]</title>
+    <link href="https://midotype.github.io/boj/boj-steps-10/"/>
+    <id>https://midotype.github.io/boj/boj-steps-10/</id>
+    <published>2022-03-24T13:27:31.000Z</published>
+    <updated>2022-05-03T01:58:33.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 열 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/22&quot;&gt;브루트포스&lt;/a&gt;의</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 09: 재귀 (Recursion) -- [3/4]</title>
+    <link href="https://midotype.github.io/boj/boj-steps-9/"/>
+    <id>https://midotype.github.io/boj/boj-steps-9/</id>
+    <published>2022-03-23T13:20:55.000Z</published>
+    <updated>2022-05-03T01:58:33.409Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 아홀 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/19&quot;&gt;재귀&lt;/a&gt;의 풀이입니다.&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="recursion" scheme="https://midotype.github.io/tags/recursion/"/>
+    
+    <category term="divide and conquer" scheme="https://midotype.github.io/tags/divide-and-conquer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 06: 문자열 (Strings)</title>
+    <link href="https://midotype.github.io/boj/boj-steps-6/"/>
+    <id>https://midotype.github.io/boj/boj-steps-6/</id>
+    <published>2022-03-21T13:13:32.000Z</published>
+    <updated>2022-05-03T01:58:33.409Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 여섯 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/7&quot;&gt;문자열&lt;/a&gt;의 풀이입니다.&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
+    
+    <category term="string" scheme="https://midotype.github.io/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 05: 함수 (Functions)</title>
+    <link href="https://midotype.github.io/boj/boj-steps-5/"/>
+    <id>https://midotype.github.io/boj/boj-steps-5/</id>
+    <published>2022-03-21T13:07:58.000Z</published>
+    <updated>2022-05-03T01:58:33.409Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 다섯 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/5&quot;&gt;함수&lt;/a&gt;의 풀이입니다.&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
+    
+    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
+    
+    <category term="math" scheme="https://midotype.github.io/tags/math/"/>
+    
+    <category term="string" scheme="https://midotype.github.io/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 04: 1차원 배열 (1-D Array)</title>
+    <link href="https://midotype.github.io/boj/boj-steps-4/"/>
+    <id>https://midotype.github.io/boj/boj-steps-4/</id>
+    <published>2022-03-21T12:59:37.000Z</published>
+    <updated>2022-05-03T01:58:33.409Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 네 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/6&quot;&gt;1차원 배열&lt;/a&gt;의</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
+    
+    <category term="math" scheme="https://midotype.github.io/tags/math/"/>
+    
+    <category term="string" scheme="https://midotype.github.io/tags/string/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 03: 반복문 (Loops)</title>
+    <link href="https://midotype.github.io/boj/boj-steps-3/"/>
+    <id>https://midotype.github.io/boj/boj-steps-3/</id>
+    <published>2022-03-21T12:47:48.000Z</published>
+    <updated>2022-05-03T01:58:33.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 세 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/3&quot;&gt;반복문&lt;/a&gt;의 풀이입니다.&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
+    
+    <category term="math" scheme="https://midotype.github.io/tags/math/"/>
+    
+    <category term="arithmetic" scheme="https://midotype.github.io/tags/arithmetic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 02: 조건문 (Conditions)</title>
+    <link href="https://midotype.github.io/boj/boj-steps-2/"/>
+    <id>https://midotype.github.io/boj/boj-steps-2/</id>
+    <published>2022-03-21T12:34:58.000Z</published>
+    <updated>2022-05-03T01:58:33.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 두 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/4&quot;&gt;조건문&lt;/a&gt;의 풀이입니다.&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
+    
+    <category term="math" scheme="https://midotype.github.io/tags/math/"/>
+    
+    <category term="arithmetic" scheme="https://midotype.github.io/tags/arithmetic/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>BOJ 01: 입출력과 사칙연산 (STDIO &amp; Arithmetic)</title>
+    <link href="https://midotype.github.io/boj/boj-steps-1/"/>
+    <id>https://midotype.github.io/boj/boj-steps-1/</id>
+    <published>2022-03-21T12:21:41.000Z</published>
+    <updated>2022-05-03T01:58:33.408Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;백준 온라인저지 &lt;a href=&quot;https://www.acmicpc.net/step&quot;&gt;단계별로 문제풀기&lt;/a&gt;의 첫 번째 단계 &lt;a href=&quot;https://www.acmicpc.net/step/1&quot;&gt;입출력과 사칙연산&lt;/a&gt;의</summary>
+        
+      
+    
+    
+    
+    <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
+    
+    
+    <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Implement Mutable Array: Vector</title>
+    <link href="https://midotype.github.io/en-implement-vector/"/>
+    <id>https://midotype.github.io/en-implement-vector/</id>
+    <published>2022-03-06T11:40:05.000Z</published>
+    <updated>2022-05-03T01:58:33.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Here are lists of functions to implement for the vector:&lt;/p&gt;
+&lt;h2 id=&quot;Private-function&quot;&gt;&lt;a href=&quot;#Private-function&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="C/C++" scheme="https://midotype.github.io/categories/C-C/"/>
+    
+    
+    <category term="vector" scheme="https://midotype.github.io/tags/vector/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>파이썬으로 데이터 분석하기 - Numpy</title>
+    <link href="https://midotype.github.io/ko-python-numpy/"/>
+    <id>https://midotype.github.io/ko-python-numpy/</id>
+    <published>2022-01-31T03:00:00.000Z</published>
+    <updated>2022-05-03T01:58:33.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Numpy-준비하기&quot;&gt;&lt;a href=&quot;#Numpy-준비하기&quot; class=&quot;headerlink&quot; title=&quot;Numpy 준비하기&quot;&gt;&lt;/a&gt;Numpy 준비하기&lt;/h2&gt;&lt;p&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://midotype.github.io/categories/Python/"/>
+    
+    
+    <category term="numpy" scheme="https://midotype.github.io/tags/numpy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>파이썬 기초 정리</title>
+    <link href="https://midotype.github.io/ko-python-basic/"/>
+    <id>https://midotype.github.io/ko-python-basic/</id>
+    <published>2022-01-30T03:00:00.000Z</published>
+    <updated>2022-05-03T01:58:33.411Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;정수형-Integer&quot;&gt;&lt;a href=&quot;#정수형-Integer&quot; class=&quot;headerlink&quot; title=&quot;정수형 (Integer)&quot;&gt;&lt;/a&gt;정수형 (Integer)&lt;/h2&gt;&lt;figure class=&quot;highlight</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="https://midotype.github.io/categories/Python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Big-O記法とは</title>
+    <link href="https://midotype.github.io/ja-algorithm-complexity/"/>
+    <id>https://midotype.github.io/ja-algorithm-complexity/</id>
+    <published>2021-05-03T03:00:00.000Z</published>
+    <updated>2022-05-03T01:58:33.410Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Big-O記法とは&quot;&gt;&lt;a href=&quot;#Big-O記法とは&quot; class=&quot;headerlink&quot; title=&quot;Big-O記法とは&quot;&gt;&lt;/a&gt;Big-O記法とは&lt;/h2&gt;&lt;p&gt;Big-O記法（&lt;code&gt;O(log N)&lt;/code&gt;,</summary>
+        
+      
+    
+    
+    
+    <category term="Data Structure &amp; Algorithm" scheme="https://midotype.github.io/categories/Data-Structure-Algorithm/"/>
+    
+    
+    <category term="complexity" scheme="https://midotype.github.io/tags/complexity/"/>
+    
+  </entry>
+  
+</feed>
