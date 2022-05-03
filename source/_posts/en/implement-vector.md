@@ -3,6 +3,7 @@ title: "Implement Mutable Array: Vector"
 date: 2022-03-06 20:40:05
 tags: [vector]
 categories: [C/C++]
+lang: en
 ---
 
 Here are lists of functions to implement for the vector:

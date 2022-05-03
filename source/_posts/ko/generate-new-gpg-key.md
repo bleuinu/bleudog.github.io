@@ -2,8 +2,8 @@
 title: GPG key 생성하기
 date: 2022-04-05 21:11:01
 tags: [github, gpg]
-top_img: /images/banner/neg.jpeg
 categories: [Git]
+lang: ko
 ---
 
 gpg (GnuPG) 2.3.3

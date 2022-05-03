@@ -3,6 +3,7 @@ title: 'BOJ 04: 1차원 배열 (1-D Array)'
 date: 2022-03-21 21:59:37
 tags: [implementation, math, string]
 categories: [Baekjoon]
+lang: ko
 ---
 
 백준 온라인저지 [단계별로 문제풀기](https://www.acmicpc.net/step)의 네 번째 단계 [1차원 배열](https://www.acmicpc.net/step/6)의 풀이입니다.

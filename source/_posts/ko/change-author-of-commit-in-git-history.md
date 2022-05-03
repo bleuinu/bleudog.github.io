@@ -3,6 +3,7 @@ title: "Change Author of Commit in Git History"
 date: 2022-05-03 12:35:14
 tags: [git, filter-branch]
 categories: [Git]
+lang: ko
 ---
 
 깃 리포지토리에서 아래의 명령어를 사용하여 이름과 이메일을 설정할 수 있다.

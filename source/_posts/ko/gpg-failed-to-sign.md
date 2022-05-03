@@ -1,9 +1,9 @@
 ---
 title: "error: gpg failed to sign"
 date: 2022-04-05 23:00:04
-top_img: /images/banner/neg.jpeg
 tags: [git, gpg, error]
 categories: [Git]
+lang: ko
 ---
 
 GPG key를 사용해서 [커밋에 서명](./ko-gpg-failed-to-sign.md)을 하는데 아래와 같은 오류가 발생했다.

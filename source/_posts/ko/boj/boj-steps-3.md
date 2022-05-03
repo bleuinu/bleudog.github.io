@@ -3,6 +3,7 @@ title: 'BOJ 03: 반복문 (Loops)'
 date: 2022-03-21 21:47:48
 tags: [implementation, math, arithmetic]
 categories: [Baekjoon]
+lang: ko
 ---
 
 백준 온라인저지 [단계별로 문제풀기](https://www.acmicpc.net/step)의 세 번째 단계 [반복문](https://www.acmicpc.net/step/3)의 풀이입니다.

@@ -3,6 +3,7 @@ title: 'BOJ 05: 함수 (Functions)'
 date: 2022-03-21 22:07:58
 tags: [implementation, math, string, bruteforce]
 categories: [Baekjoon]
+lang: ko
 ---
 
 백준 온라인저지 [단계별로 문제풀기](https://www.acmicpc.net/step)의 다섯 번째 단계 [함수](https://www.acmicpc.net/step/5)의 풀이입니다.

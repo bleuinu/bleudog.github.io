@@ -3,6 +3,7 @@ title: 'BOJ 09: 재귀 (Recursion) -- [3/4]'
 date: 2022-03-23 22:20:55
 tags: [recursion, divide and conquer]
 categories: [Baekjoon]
+lang: ko
 ---
 
 백준 온라인저지 [단계별로 문제풀기](https://www.acmicpc.net/step)의 아홀 번째 단계 [재귀](https://www.acmicpc.net/step/19)의 풀이입니다.

@@ -3,6 +3,7 @@ title: git commit 서명하기
 date: 2022-04-05 22:20:15
 tags: [git, gpg]
 categories: [Git]
+lang: ko
 ---
 
 ## Signing commits

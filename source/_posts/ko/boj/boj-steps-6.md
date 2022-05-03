@@ -3,6 +3,7 @@ title: 'BOJ 06: 문자열 (Strings)'
 date: 2022-03-21 22:13:32
 tags: [implementation, string]
 categories: [Baekjoon]
+lang: ko
 ---
 
 백준 온라인저지 [단계별로 문제풀기](https://www.acmicpc.net/step)의 여섯 번째 단계 [문자열](https://www.acmicpc.net/step/7)의 풀이입니다.

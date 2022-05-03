@@ -2,7 +2,8 @@
 title:  "파이썬으로 데이터 분석하기 - Numpy"
 date: 2022-01-31 12:00:00
 categories: [Python]
-tags: [numpy]
+tags: [numpy, python]
+lang: ko
 ---
 
 ## Numpy 준비하기

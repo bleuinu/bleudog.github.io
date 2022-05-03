@@ -2,7 +2,8 @@
 title:  "파이썬 기초 정리"
 date:   2022-01-30 12:00:00
 categories: [Python]
-tags:
+tags: ["python"]
+lang: ko
 ---
 
 ## 정수형 (Integer)

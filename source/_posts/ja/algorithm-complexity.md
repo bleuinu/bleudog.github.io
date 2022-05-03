@@ -2,8 +2,8 @@
 title:  "Big-O記法とは"
 date:   2021-05-03 12:00:00
 tags: [complexity]
-top_img: /images/banner/speed.jpeg
 categories: [Data Structure & Algorithm]
+lang: ja
 ---
 
 ## Big-O記法とは
