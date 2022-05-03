@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="Mido Eu" />
+  <meta name="description" content="Frontend Engineer&#39;s study log" />
+  
+  
+  <title>
+    
+      파이썬으로 데이터 분석하기 - Numpy 
+      
+      
+    
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/avatar.jpg">
+    <link rel="icon" href="/images/avatar.jpg">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+
+  
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Mido Eu (劉謎道)" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">MIDOTYPE</a>
+</div>
+
+
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="github" target="_blank" href="https://github.com/midotype">
+      <i class="iconfont icon-github"></i>
+    </a>
+  
+    <a title="email" target="" href="mailto:mido.eu@proton.me">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="twitter" target="" href="https://twitter.com/midotype_">
+      <i class="iconfont icon-twitter"></i>
+    </a>
+  
+    <a title="rss" target="_blank" href="/atom.xml">
+      <i class="iconfont icon-rss"></i>
+    </a>
+  
+</p>
+
+
+      <div class="main">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Jan 31, 2022
+  </h3>
+  <h1>
+    파이썬으로 데이터 분석하기 - Numpy
+  </h1>
+  <div class="content markdown-body">
+    <h2 id="Numpy-준비하기"><a href="#Numpy-준비하기" class="headerlink" title="Numpy 준비하기"></a>Numpy 준비하기</h2><p><a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual">Anaconda</a> 환경이라면 <code>conda</code>, 그렇지 않다면 <code>pip</code>를 사용하여 <code>numpy</code>를 설치해준다.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">conda install numpy</span></span><br><span class="line"><span class="meta prompt_"> #</span><span class="language-bash">or</span></span><br><span class="line"><span class="meta prompt_"> $ </span><span class="language-bash">pip install numpy</span></span><br></pre></td></tr></table></figure>
+
+<p>제대로 설치가 되었다면 파이썬 interactive shell에서 <code>import</code> 해보자.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+
+<h2 id="Numpy-배열"><a href="#Numpy-배열" class="headerlink" title="Numpy 배열"></a>Numpy 배열</h2><h3 id="파이썬-리스트에서-numpy-배열-만들기"><a href="#파이썬-리스트에서-numpy-배열-만들기" class="headerlink" title="파이썬 리스트에서 numpy 배열 만들기"></a>파이썬 리스트에서 numpy 배열 만들기</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">mylist = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>]</span><br><span class="line"> np.array(mylist)</span><br><span class="line"> <span class="comment"># array([  1,   2,   3,   4,   5,   6,   7,   8,   9])</span></span><br><span class="line"></span><br><span class="line"> mylist2 = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>], [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>], [<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>]]</span><br><span class="line"> np.array(mylist)</span><br><span class="line"> <span class="comment"># array([[1, 2, 3],</span></span><br><span class="line"> <span class="comment">#       [4, 5, 6],</span></span><br><span class="line"> <span class="comment">#       [7, 8, 9]])</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="numpy-built-in-메소드-사용"><a href="#numpy-built-in-메소드-사용" class="headerlink" title="numpy built-in 메소드 사용"></a>numpy built-in 메소드 사용</h3><figure class="highlight py"><table><tr><td class="code"><pre><span class="line">np.arange(<span class="number">1</span>, <span class="number">10</span>)</span><br><span class="line"> <span class="comment"># array([1, 2, 3, 4, 5, 6, 7, 8, 9])</span></span><br><span class="line"> </span><br><span class="line"> np.arange(<span class="number">1</span>, <span class="number">101</span>)</span><br><span class="line"> <span class="comment"># array([1, 2, 3, ..., 98, 99, 100])</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="zeroes-amp-ones"><a href="#zeroes-amp-ones" class="headerlink" title="zeroes() &amp; ones()"></a>zeroes() &amp; ones()</h3><p><code>zeros</code>와 <code>ones</code>는 각각 <code>0</code>과 <code>1</code>의 배열을 만들때 사용하는 메소드이다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">np.zeros(<span class="number">3</span>) <span class="comment"># array([0., 0., 0.])</span></span><br><span class="line"> np.ones(<span class="number">3</span>) <span class="comment"># array([1., 1., 1.])</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="linspace"><a href="#linspace" class="headerlink" title="linspace()"></a>linspace()</h3><p>문법: <code>numpy.linspace(start, stop, n)</code> – <code>start</code>와 <code>stop</code>사이를 <code>n</code>개의 균일한 간격으로 나눠주는 함수.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">3</span>)</span><br><span class="line"> <span class="comment"># array([ 0.,  5., 10.])</span></span><br><span class="line"> </span><br><span class="line"> np.linspace(<span class="number">0</span>, <span class="number">10</span>, <span class="number">4</span>)</span><br><span class="line"> <span class="comment"># array([ 0.        ,  3.33333333,  6.66666667, 10.        ])</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="eye"><a href="#eye" class="headerlink" title="eye()"></a>eye()</h3><p>단위 행렬(Identity Matrix)를 만들 때 사용하는 함수</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">np.eye(<span class="number">3</span>)</span><br><span class="line"> <span class="comment"># array([[1., 0., 0.],</span></span><br><span class="line"> <span class="comment">#       [0., 1., 0.],</span></span><br><span class="line"> <span class="comment">#       [0., 0., 1.]])</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="난수-Random"><a href="#난수-Random" class="headerlink" title="난수 (Random)"></a>난수 (Random)</h2><h3 id="rand"><a href="#rand" class="headerlink" title="rand()"></a>rand()</h3><p><code>rand(n)</code> 함수는 [0, 1) 범위의 균일한 분포로부터 샘플링된 <code>n</code>개의 난수를 반환한다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">np.random.rand(<span class="number">2</span>)</span><br><span class="line"> <span class="comment"># array([0.60813646, 0.02227888])</span></span><br><span class="line"> </span><br><span class="line"> np.random.rand(<span class="number">5</span>) </span><br><span class="line"> <span class="comment"># array([0.78071868, 0.41576468, 0.12461101, 0.35558746, 0.41081693])</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="randn"><a href="#randn" class="headerlink" title="randn()"></a>randn()</h3><p><code>randn(n)</code>은 <code>rand</code>와는 다르게 표준 정규 분포(standard normal distribution)로부터 샘플링된 난수를 반환한다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">np.random.randn(<span class="number">2</span>)</span><br><span class="line"> <span class="comment"># array([-2.70796513, -0.81136033])</span></span><br><span class="line"> </span><br><span class="line"> np.random.randn(<span class="number">5</span>)</span><br><span class="line"> <span class="comment"># array([ 0.47264387, -0.96997734,  0.30014722,  0.73124038, -1.67470256])</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="randint"><a href="#randint" class="headerlink" title="randint()"></a>randint()</h3><p>문법: <code>randint(low, high, n)</code> – <code>[low, high)</code> 사이의 정수형 난수를 <code>n</code>개 반환한다. <code>high</code>는 포함되지 않는다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">np.random.randint(<span class="number">0</span>, <span class="number">10</span>, <span class="number">1</span>) </span><br><span class="line"> <span class="comment"># 0 부터 9까지의 숫자 중 하나가 출력 됨</span></span><br></pre></td></tr></table></figure>
+
+<p><code>randint()</code>를 사용해서 임의의 값을 가진 배열을 만들 수 있다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.arange(<span class="number">10</span>)</span><br><span class="line"> randarr = np.random.randint(<span class="number">0</span>, <span class="number">50</span>, <span class="number">10</span>)</span><br><span class="line"> </span><br><span class="line"> <span class="built_in">print</span>(arr)     <span class="comment"># array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</span></span><br><span class="line"> <span class="built_in">print</span>(randarr) <span class="comment"># array([40, 32,  1,  2, 22, 31, 37, 18,  7,  8])</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="최대값-amp-최소값-max-amp-min"><a href="#최대값-amp-최소값-max-amp-min" class="headerlink" title="최대값 &amp; 최소값 (max &amp; min)"></a>최대값 &amp; 최소값 (max &amp; min)</h3><ul>
+<li><code>max</code>함수는 최대값, <code>min</code>함수는 최소값을 구할 때 사용된다. </li>
+<li><code>argmax()</code>와 <code>argmin()</code>을 사용하여 최대값과 최소값의 위치를 인덱스로 받아 올 수 있다.</li>
+</ul>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.random.randint(<span class="number">0</span>, <span class="number">10</span>, <span class="number">10</span>)</span><br><span class="line"><span class="built_in">print</span>(arr)</span><br><span class="line"><span class="comment"># array([9, 9, 6, 3, 9, 5, 5, 6, 0, 6])</span></span><br><span class="line"></span><br><span class="line">arr.<span class="built_in">max</span>() <span class="comment"># 9</span></span><br><span class="line">arr.<span class="built_in">min</span>() <span class="comment"># 0</span></span><br><span class="line"></span><br><span class="line">arr.argmax() <span class="comment"># 0</span></span><br><span class="line">arr.argmin() <span class="comment"># 8</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(arr[arr.argmax()] == arr.<span class="built_in">max</span>()) <span class="comment"># True</span></span><br><span class="line"><span class="built_in">print</span>(arr[arr.argmin()] == arr.<span class="built_in">min</span>()) <span class="comment"># True</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="구조-재배열-Reshape"><a href="#구조-재배열-Reshape" class="headerlink" title="구조 재배열 (Reshape)"></a>구조 재배열 (Reshape)</h2><p><code>reshape</code>함수는 배열과 차원을 변형할 때 사용되는 함수이다. <code>arr.reshape(row, col)</code>과 같이 사용하며 <code>row</code>열과 <code>col</code>행의 구조로 변형된다.</p>
+<p><code>row</code> * <code>col</code>이 본래의 배열 요소의 개수와 일치해야 한다. 1차원 배열은 <code>1 * col</code>과 같기 때문.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>])</span><br><span class="line"> <span class="built_in">print</span>(arr)</span><br><span class="line"> <span class="comment"># array([ 1,  2,  3,  4,  5,  6,  7,  8,  9, 10])</span></span><br><span class="line"></span><br><span class="line"> arr.reshape(<span class="number">2</span>,<span class="number">5</span>)</span><br><span class="line"> <span class="comment"># array([[ 1,  2,  3,  4,  5],</span></span><br><span class="line"> <span class="comment">#        [ 6,  7,  8,  9, 10]])</span></span><br><span class="line"> </span><br><span class="line"> arr.reshape(<span class="number">5</span>,<span class="number">2</span>)</span><br><span class="line"> <span class="comment"># array([[ 1,  2],</span></span><br><span class="line"> <span class="comment">#        [ 3,  4],</span></span><br><span class="line"> <span class="comment">#        [ 5,  6],</span></span><br><span class="line"> <span class="comment">#        [ 7,  8],</span></span><br><span class="line"> <span class="comment">#        [ 9, 10]])</span></span><br><span class="line"></span><br><span class="line"> arr.reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line"> <span class="comment"># Traceback (most recent call last):</span></span><br><span class="line"> <span class="comment">#  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span></span><br><span class="line"> <span class="comment"># ValueError: cannot reshape array of size 10 into shape (3,3)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="배열-속성"><a href="#배열-속성" class="headerlink" title="배열 속성"></a>배열 속성</h2><h3 id="shape"><a href="#shape" class="headerlink" title="shape"></a>shape</h3><p><code>shape</code>은 메소드가 아닌 배열의 속성으로써 현 배열의 구조를 파악하는데 도움을 준다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>])</span><br><span class="line"> arr.shape <span class="comment"># (10,)</span></span><br><span class="line"> </span><br><span class="line"> arr.reshape(<span class="number">2</span>, <span class="number">5</span>).shape <span class="comment"># (2, 5)</span></span><br><span class="line"> arr.reshape(<span class="number">10</span>, <span class="number">1</span>).shape <span class="comment"># (10, 1)</span></span><br><span class="line"> arr.reshape(<span class="number">1</span>, <span class="number">10</span>).shape <span class="comment"># (1, 10)</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="dtype"><a href="#dtype" class="headerlink" title="dtype"></a>dtype</h3><p><code>dtype</code> 속성을 사용하여 배열의 자료형을 파악할 수 있다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.array([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>])</span><br><span class="line"> arr.dtype <span class="comment"># dtype(&#x27;int64&#x27;)</span></span><br><span class="line"> </span><br><span class="line"> arr = np.random.rand(<span class="number">10</span>)</span><br><span class="line"> arr.dtype <span class="comment"># dtype(&#x27;float64&#x27;)</span></span><br><span class="line"> </span><br><span class="line"> arr = np.array([<span class="literal">True</span>, <span class="literal">False</span>])</span><br><span class="line"> arr.dtype <span class="comment"># dtype(&#x27;bool&#x27;)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Numpy-인덱싱-amp-선택-영역-Indexing-amp-Selection"><a href="#Numpy-인덱싱-amp-선택-영역-Indexing-amp-Selection" class="headerlink" title="Numpy 인덱싱 &amp; 선택 영역 (Indexing &amp; Selection)"></a>Numpy 인덱싱 &amp; 선택 영역 (Indexing &amp; Selection)</h2><h3 id="첨자-연산자-Subscript-Operator"><a href="#첨자-연산자-Subscript-Operator" class="headerlink" title="첨자([]) 연산자 (Subscript Operator)"></a>첨자(<code>[]</code>) 연산자 (Subscript Operator)</h3><p>Numpy의 배열도 파이썬의 일반 배열처럼 <code>[]</code>연산을 사용하여 요소에 접근할 수 있다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.arange(<span class="number">10</span>)</span><br><span class="line"> </span><br><span class="line"> <span class="built_in">print</span>(arr) <span class="comment"># [0 1 2 3 4 5 6 7 8 9]</span></span><br><span class="line"> <span class="built_in">print</span>(arr[<span class="number">0</span>]) <span class="comment"># 0</span></span><br><span class="line"> <span class="built_in">print</span>(arr[-<span class="number">1</span>]) <span class="comment"># 9</span></span><br><span class="line"> </span><br><span class="line"> <span class="built_in">print</span>(arr[:<span class="number">5</span>]) <span class="comment"># [0 1 2 3 4]</span></span><br><span class="line"> <span class="built_in">print</span>(arr[<span class="number">5</span>:]) <span class="comment"># [5 6 7 8 9]</span></span><br><span class="line"> </span><br><span class="line"> <span class="built_in">print</span>(arr[<span class="number">0</span>:<span class="number">3</span>]) <span class="comment"># [0 1 2]</span></span><br><span class="line"> <span class="built_in">print</span>(arr[<span class="number">3</span>:<span class="number">6</span>]) <span class="comment"># [3 4 5]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="브로드캐스팅-Broadcasting"><a href="#브로드캐스팅-Broadcasting" class="headerlink" title="브로드캐스팅 (Broadcasting)"></a>브로드캐스팅 (Broadcasting)</h3><p><code>[0, 2, 6]</code>과 같은 배열이 있고 모든 요소에 <code>3</code>을 추가하기 위해서는 보통 반복문을 사용해서 각 요소에 값을 더해줘야 한다.<br>아래와 같은 연산은 불가능하다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = [<span class="number">0</span>, <span class="number">2</span>, <span class="number">6</span>]</span><br><span class="line"> <span class="built_in">print</span>(arr) <span class="comment"># [0, 2, 6]</span></span><br><span class="line"> arr[:] += <span class="number">3</span></span><br><span class="line"> <span class="comment"># Traceback (most recent call last):</span></span><br><span class="line"> <span class="comment">#  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;</span></span><br><span class="line"> <span class="comment"># TypeError: &#x27;int&#x27; object is not iterable</span></span><br></pre></td></tr></table></figure>
+
+<p>하지만 Numpy 배열에는 브로드캐스팅(broadcasting)이라는 기능이 있어, 이와 같은 연산이 가능하다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.array([<span class="number">0</span>, <span class="number">2</span>, <span class="number">6</span>])</span><br><span class="line"> <span class="built_in">print</span>(arr) <span class="comment"># [0 2 6]</span></span><br><span class="line"> </span><br><span class="line"> arr[:] += <span class="number">3</span></span><br><span class="line"> <span class="built_in">print</span>(arr) <span class="comment"># [3, 5, 9]</span></span><br></pre></td></tr></table></figure>
+
+<p>브로드캐스팅으로 바뀐 값들은 단순 복사된 모드 개체들에 영향을 끼친다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.arange(<span class="number">10</span>)</span><br><span class="line"> <span class="built_in">print</span>(arr) <span class="comment"># [0 1 2 3 4 5 6 7 8 9]</span></span><br><span class="line"> </span><br><span class="line"> copy_arr = arr[:<span class="number">3</span>]</span><br><span class="line"> <span class="built_in">print</span>(copy_arr) <span class="comment"># [0 1 2]</span></span><br><span class="line"> </span><br><span class="line"> copy_arr[:] = <span class="number">99</span></span><br><span class="line"> <span class="built_in">print</span>(copy_arr) <span class="comment"># [99 99 99]</span></span><br><span class="line"></span><br><span class="line"> <span class="built_in">print</span>(arr) <span class="comment"># [99 99 99 3 4 5 6 7 8 9]</span></span><br></pre></td></tr></table></figure>
+
+<p>이는 메모리 문제를 예방하기 위한 것으로, 만약 전체 복사(deep copy)를 하고 싶다면 <code>copy()</code> 함수를 사용해서 배열을 복제한 후, 브로드캐스팅을 하면 본래의 배열에는 영향이 가지않는다.</p>
+<h3 id="2차원-배열-인덱싱-Indexing-2D-Arrays"><a href="#2차원-배열-인덱싱-Indexing-2D-Arrays" class="headerlink" title="2차원 배열 인덱싱 (Indexing 2D Arrays)"></a>2차원 배열 인덱싱 (Indexing 2D Arrays)</h3><p>아래와 같은 배열이 있다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.arange(<span class="number">1</span>,<span class="number">10</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line"> <span class="built_in">print</span>(arr)</span><br><span class="line"> <span class="comment"># [[1 2 3]</span></span><br><span class="line"> <span class="comment">#  [4 5 6]</span></span><br><span class="line"> <span class="comment">#  [7 8 9]]</span></span><br></pre></td></tr></table></figure>
+
+<p>일반 파이썬과 같이 <code>[row][col]</code>으로 접근이 가능하다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(arr[<span class="number">0</span>]) <span class="comment"># [1 2 3]</span></span><br><span class="line"> <span class="built_in">print</span>(arr[<span class="number">0</span>]<span class="number">0</span>]) <span class="comment"># 1</span></span><br><span class="line"> <span class="built_in">print</span>(arr[-<span class="number">1</span>][<span class="number">0</span>]) <span class="comment"># 7</span></span><br></pre></td></tr></table></figure>
+
+<p>하지만 Numpy 배열은 훨씬 편한 방법을 제공한다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(arr[<span class="number">0</span>, <span class="number">0</span>]) <span class="comment"># 1</span></span><br><span class="line"> <span class="built_in">print</span>(arr[-<span class="number">1</span>, <span class="number">0</span>]) <span class="comment"># 7</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2차원-배열-슬라이싱-Slicing-2D-Arrays"><a href="#2차원-배열-슬라이싱-Slicing-2D-Arrays" class="headerlink" title="2차원 배열 슬라이싱 (Slicing 2D Arrays)"></a>2차원 배열 슬라이싱 (Slicing 2D Arrays)</h3><p>위와 동일한 2차원 배열이 있다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.arange(<span class="number">1</span>,<span class="number">10</span>).reshape(<span class="number">3</span>,<span class="number">3</span>)</span><br><span class="line"> <span class="built_in">print</span>(arr)</span><br><span class="line"> <span class="comment"># [[1 2 3]</span></span><br><span class="line"> <span class="comment">#  [4 5 6]</span></span><br><span class="line"> <span class="comment">#  [7 8 9]]</span></span><br></pre></td></tr></table></figure>
+
+<p><code>arr[r1:r2, c1:c2]</code>과 같은 형식으로 원하는 열과 행을 가져올 수 있다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(arr[<span class="number">1</span>:,])</span><br><span class="line"> <span class="comment"># [[4 5 6]</span></span><br><span class="line"> <span class="comment">#  [7 8 9]]</span></span><br><span class="line"></span><br><span class="line"> <span class="built_in">print</span>(arr[<span class="number">1</span>:, :<span class="number">2</span>])</span><br><span class="line"> <span class="comment"># [[4 5]</span></span><br><span class="line"> <span class="comment">#  [7 8]]</span></span><br><span class="line"></span><br><span class="line"> <span class="built_in">print</span>(arr[<span class="number">1</span>:, :<span class="number">1</span>])</span><br><span class="line"> <span class="comment"># [[4]</span></span><br><span class="line"> <span class="comment">#  [7]]</span></span><br><span class="line"></span><br><span class="line"> <span class="built_in">print</span>(arr[:, :<span class="number">1</span>])</span><br><span class="line"> <span class="comment"># [[1]</span></span><br><span class="line"> <span class="comment">#  [4]</span></span><br><span class="line"> <span class="comment">#  [7]]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="선택-영역-Selection"><a href="#선택-영역-Selection" class="headerlink" title="선택 영역 (Selection)"></a>선택 영역 (Selection)</h3><p>Numpy 배열과 논리 연산을 수행하여 해당 논리에 <code>True</code>값이 나오는 요소들만 선택해서 반환할 수 있다.</p>
+<p>예를들어 0~10의 배열에서 짝수와 홀수를 따로 추려내고 싶다면 아래와 같은 연산이 가능하다.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.arange(<span class="number">10</span>) <span class="comment"># [0 1 2 3 4 5 6 7 8 9]</span></span><br><span class="line">arr[arr % <span class="number">2</span> == <span class="number">0</span>] <span class="comment"># [0 2 4 6 8]</span></span><br><span class="line">arr[arr % <span class="number">2</span> != <span class="number">0</span>] <span class="comment"># [1 3 5 7 9]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="범용-함수-Universal-Functions"><a href="#범용-함수-Universal-Functions" class="headerlink" title="범용 함수 (Universal Functions)"></a>범용 함수 (Universal Functions)</h2><p>위에서 <code>max()</code>, <code>min()</code>과 같은 기본 내장 함수들을 살짝살짝 소개했었는데, 이 외에도 numpy는 수많은 <a target="_blank" rel="noopener" href="https://numpy.org/doc/stable/reference/ufuncs.html">범용 함수</a>들을 지원한다.</p>
+<p>수학 관련 함수 몇 개만 소개하자면 아래와 같은 것들이 있다. 어떤 동작을 하는지 모르겠다면 범용 함수 문서를 살펴보도록 하자.</p>
+<figure class="highlight py"><table><tr><td class="code"><pre><span class="line">arr = np.arange(<span class="number">1</span>, <span class="number">11</span>)</span><br><span class="line"></span><br><span class="line">np.sqrt(arr)</span><br><span class="line">np.exp(arr)</span><br><span class="line">np.std(arr)</span><br><span class="line"></span><br><span class="line">np.sin(arr)</span><br><span class="line">np.cos(arr)</span><br><span class="line"></span><br><span class="line">np.log(arr)</span><br></pre></td></tr></table></figure>
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/ko/python-basic/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/en/implement-vector/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="Search...">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>첫 번째 검색, 인덱스 파일을 불러오고 있습니다. 잠시 후 …<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='/" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>검색어를 찾을 수 없습니다. 검색어를 바꿔 보세요<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>

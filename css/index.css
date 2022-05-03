@@ -18,7 +18,7 @@
   text-transform: uppercase;
 }
 .main h2 {
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 1px;
   margin-left: 120px;
 }
@@ -33,11 +33,11 @@
   color: #999;
   position: absolute;
   left: 0;
-  top: 33px;
+  top: 31px;
 }
 @media screen and (max-width: 420px) {
   .main h2 {
-    font-size: 16px;
+    font-size: 14px;
     margin-left: 0;
   }
   .main h2 a:hover {

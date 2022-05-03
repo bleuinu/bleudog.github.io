@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords" content="" />
+  <meta name="author" content="Mido Eu" />
+  <meta name="description" content="Frontend Engineer&#39;s study log" />
+  
+  
+  <title>
+    
+      Implement Mutable Array: Vector 
+      
+      
+    
+  </title>
+
+  
+    <link rel="apple-touch-icon" href="/images/avatar.jpg">
+    <link rel="icon" href="/images/avatar.jpg">
+  
+
+  <!-- Raleway-Font -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:400,400italic,600|Roboto+Mono" rel="stylesheet">
+
+  <!-- hexo site css -->
+  
+<link rel="stylesheet" href="/css/base.css">
+<link rel="stylesheet" href="/css/common.css">
+<link rel="stylesheet" href="/iconfont/iconfont.css">
+
+
+  
+
+  
+    
+<link rel="stylesheet" href="/css/post.css">
+
+  
+
+  <!-- jquery3.3.1 -->
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- fancybox -->
+  <link href="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.css" rel="stylesheet">
+  <script async src="https://cdn.bootcss.com/fancybox/3.5.2/jquery.fancybox.min.js"></script>
+  
+<script src="/js/fancybox.js"></script>
+
+
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Mido Eu (劉謎道)" type="application/atom+xml">
+</head>
+
+
+  <body>
+    <div id="app">
+      <div class="header">
+  <a href="/">MIDOTYPE</a>
+</div>
+
+
+      <p class="links">
+  
+    <a title="archives" target="" href="/archives/">
+      <i class="iconfont icon-bookmark"></i>
+    </a>
+  
+    <a title="github" target="_blank" href="https://github.com/midotype">
+      <i class="iconfont icon-github"></i>
+    </a>
+  
+    <a title="email" target="" href="mailto:mido.eu@proton.me">
+      <i class="iconfont icon-envelope"></i>
+    </a>
+  
+    <a title="twitter" target="" href="https://twitter.com/midotype_">
+      <i class="iconfont icon-twitter"></i>
+    </a>
+  
+    <a title="rss" target="_blank" href="/atom.xml">
+      <i class="iconfont icon-rss"></i>
+    </a>
+  
+</p>
+
+
+      <div class="main">
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+
+<!-- LaTex Display -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']]
+    }
+  };
+</script>
+
+<div class="post">
+  <h3 class="date">
+    Mar 06, 2022
+  </h3>
+  <h1>
+    Implement Mutable Array: Vector
+  </h1>
+  <div class="content markdown-body">
+    <p>Here are lists of functions to implement for the vector:</p>
+<h2 id="Private-function"><a href="#Private-function" class="headerlink" title="Private function"></a>Private function</h2><ul>
+<li><code>resize(new_capacity)</code> <ul>
+<li>double the capacity when vector is full</li>
+<li>halve the capacity if size is 1&#x2F;4 of capacity</li>
+</ul>
+</li>
+</ul>
+<h2 id="Public-function"><a href="#Public-function" class="headerlink" title="Public function"></a>Public function</h2><ul>
+<li><code>size()</code> - returns number of items in vector</li>
+<li><code>capacity()</code> - returns number of items it can hold</li>
+<li><code>is_empty()</code> - returns true if empty, else false</li>
+<li><code>at(index)</code> - returns item at given index</li>
+<li><code>push_back(data)</code> - adds data at the end of the vector</li>
+<li><code>pop_back()</code> - removes the data from the end and returns it</li>
+<li><code>prepend(data)</code> - inserts data at index 0</li>
+<li><code>insert(index, data)</code> - inserts data at index, shifts that index’s value and trailing elements to the right</li>
+<li><code>delete(index)</code> - deletes data at index and shift all trailing elements left</li>
+<li><code>remove(data)</code> - find and remove all data from the vector</li>
+<li><code>find(data)</code> - looks for value and returns first index with that value, -1 if not found</li>
+</ul>
+<h2 id="Things-to-keep-in-mind"><a href="#Things-to-keep-in-mind" class="headerlink" title="Things to keep in mind:"></a>Things to keep in mind:</h2><ul>
+<li>Time complexity<ul>
+<li>constant time to add and remove data at the end, access, or update.</li>
+<li>linear time to insert or remove elsewhere because of shifting.</li>
+</ul>
+</li>
+<li>Space complexity<ul>
+<li>linear -&gt; (array capacity) * (size of data)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="Implementation"><a href="#Implementation" class="headerlink" title="Implementation"></a>Implementation</h2><h3 id="Vector-structure"><a href="#Vector-structure" class="headerlink" title="Vector structure"></a>Vector structure</h3><p>I first defined a structure for the vector:</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">  <span class="type">int</span> *arr;</span><br><span class="line">  <span class="type">int</span> capacity;</span><br><span class="line">  <span class="type">int</span> size;</span><br><span class="line">&#125; Vector;</span><br></pre></td></tr></table></figure>
+
+<p><code>arr</code> is the array and it’s declared as a pointer since it’s a mutable array. So it needs to be dynamic not static.</p>
+<p>I implemented <code>init()</code> function to initialize the vector and <code>destroy()</code> function to destory the instance at the end.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> INF 0x7FFFFFFF</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> DEFAULT_SIZE 16</span></span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">init</span><span class="params">(Vector *vec)</span> &#123;</span><br><span class="line">  vec-&gt;capacity = DEFAULT_SIZE;</span><br><span class="line">  vec-&gt;size = <span class="number">0</span>;</span><br><span class="line">  vec-&gt;arr = (<span class="type">int</span> *)(<span class="built_in">malloc</span>(DEFAULT_SIZE * <span class="keyword">sizeof</span>(<span class="type">int</span>)));</span><br><span class="line"></span><br><span class="line">  <span class="comment">// initialize the element as infinity </span></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;DEFAULT_SIZE; ++i) &#123;</span><br><span class="line">    (vec-&gt;arr)[i] = INF;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">void</span> <span class="title function_">destroy</span><span class="params">(Vector *vec)</span> &#123;</span><br><span class="line">  <span class="built_in">free</span>(vec-&gt;arr);</span><br><span class="line">  vec-&gt;arr = <span class="literal">NULL</span>;</span><br><span class="line">  vec-&gt;size = <span class="number">0</span>;</span><br><span class="line">  vec-&gt;capacity = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span> &#123;</span><br><span class="line">    Vector vec;</span><br><span class="line">    init(&amp;vec);</span><br><span class="line">    </span><br><span class="line">    ...</span><br><span class="line"></span><br><span class="line">    destory(&amp;vec);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Resize-the-vector"><a href="#Resize-the-vector" class="headerlink" title="Resize the vector"></a>Resize the vector</h2><p>Before we talk about adding&#x2F;removing data, lets take a look at how resizing is done.</p>
+<p>We have 2 cases for resizing:</p>
+<ol>
+<li>if the vector is full and need to <strong>double</strong> the capacity.</li>
+<li>if number of data in vector is 1&#x2F;4 of capacity and need to <strong>halve</strong> the capacity.</li>
+</ol>
+<p>We can check conditions and determine whether to double or halve the capacity in <code>resize</code>, but I didn’t wanted to do that.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">static</span> <span class="type">void</span> <span class="title function_">resize</span><span class="params">(Vector *vec, <span class="type">int</span> capacity)</span> &#123;</span><br><span class="line">  vec-&gt;capacity = capacity;</span><br><span class="line">  <span class="type">int</span> *temp = (<span class="type">int</span> *)(<span class="built_in">malloc</span>(vec-&gt;capacity * <span class="keyword">sizeof</span>(<span class="type">int</span>)));</span><br><span class="line"></span><br><span class="line">  <span class="comment">// copy over data</span></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec-&gt;size; ++i) &#123;</span><br><span class="line">    temp[i] = (vec-&gt;arr)[i];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="built_in">free</span>(vec-&gt;arr);</span><br><span class="line">  vec-&gt;arr = temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>When adding or removing data, we will check the size and pass in the appropriate capacity in <code>resize</code>. Then this function will create a new array with the new capacity, copy over existing data, and re-assign the instance’s array.</p>
+<h2 id="Add-data-at-the-end"><a href="#Add-data-at-the-end" class="headerlink" title="Add data at the end"></a>Add data at the end</h2><p>If we have 5 elements in the vector, <code>vec-&gt;size</code> will be <code>5</code>, but the index 5 means the 6th element. So we can use <code>vec-&gt;size</code> to add a data at the end in constant time.<br>But we need to make sure that we have enough space. When vector is full, we double the capacity by calling the function <code>resize</code> with doubled <code>capacity</code>.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">push_back</span><span class="params">(Vector *vec, <span class="type">int</span> size)</span> &#123;</span><br><span class="line">  <span class="comment">// double the size if vector is full</span></span><br><span class="line">  <span class="keyword">if</span>(vec-&gt;size == vec-&gt;capacity) &#123;</span><br><span class="line">    resize(vec, vec-&gt;capacity &lt;&lt; <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  (vec-&gt;arr)[vec-&gt;size] = size;</span><br><span class="line">  ++(vec-&gt;size);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Insert-data-in-the-beginning"><a href="#Insert-data-in-the-beginning" class="headerlink" title="Insert data in the beginning"></a>Insert data in the beginning</h2><p>We need to shift all elements once to the right to empty the first element. Resizing is already covered, so no need worry about going off the boundary when shifting data.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">prepend</span><span class="params">(Vector *vec, <span class="type">int</span> data)</span> &#123;</span><br><span class="line">  <span class="comment">// double the size if vector is full</span></span><br><span class="line">  <span class="keyword">if</span>(vec-&gt;size == vec-&gt;capacity) &#123;</span><br><span class="line">    resize(vec, vec-&gt;capacity &lt;&lt; <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  ++(vec-&gt;size);</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=(vec-&gt;size)<span class="number">-1</span>; i&gt;<span class="number">0</span>; --i) &#123;</span><br><span class="line">    (vec-&gt;arr)[i] = (vec-&gt;arr)[i<span class="number">-1</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  (vec-&gt;arr)[<span class="number">0</span>] = data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Insert-data-at-any-index"><a href="#Insert-data-at-any-index" class="headerlink" title="Insert data at any index"></a>Insert data at any index</h2><p>If inserting in the beginning or at the end, I utilized functions that I implemented earlier: <code>prepend</code> and <code>push_back</code>.<br>For the other case, I shifted all elements from given <code>idx</code> to the end once to the right.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">insert</span><span class="params">(Vector *vec, <span class="type">int</span> idx, <span class="type">int</span> data)</span> &#123;</span><br><span class="line">  <span class="comment">// double the size if vector is full</span></span><br><span class="line">  <span class="keyword">if</span>(vec-&gt;size == vec-&gt;capacity) &#123;</span><br><span class="line">    resize(vec, vec-&gt;capacity &lt;&lt; <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span>(idx == <span class="number">0</span>) &#123;</span><br><span class="line">    prepend(vec, data);</span><br><span class="line">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (idx &gt;= vec-&gt;size) &#123;</span><br><span class="line">    push_back(vec, data);</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    ++(vec-&gt;size);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=vec-&gt;size<span class="number">-1</span>; i&gt;idx; --i) &#123;</span><br><span class="line">      (vec-&gt;arr)[i] = (vec-&gt;arr)[i<span class="number">-1</span>];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    (vec-&gt;arr)[idx] = data;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Remove-data-at-the-end"><a href="#Remove-data-at-the-end" class="headerlink" title="Remove data at the end"></a>Remove data at the end</h2><p>Removing is straightforward. Simply set the last element to <code>null</code> or <code>INF</code> in this case.<br>Once you removed an element, check if the size is smaller than that of quarter of the capacity. If so, halve the total capacity.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">pop_back</span><span class="params">(Vector *vec)</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(is_empty(vec)) &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;.... vector is empty\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// if size is 1/4 of capacity, halve the capacity</span></span><br><span class="line">  <span class="type">int</span> quart = vec-&gt;capacity / <span class="number">4</span>;</span><br><span class="line">  <span class="keyword">if</span>(vec-&gt;capacity &gt; DEFAULT_SIZE &amp;&amp; vec-&gt;size &lt;= quart) &#123;</span><br><span class="line">    resize(vec, vec-&gt;capacity &gt;&gt; <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  --(vec-&gt;size);</span><br><span class="line">  <span class="type">int</span> data = (vec-&gt;arr)[vec-&gt;size];</span><br><span class="line">  (vec-&gt;arr)[vec-&gt;size] = INF;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Remove-data-at-any-index"><a href="#Remove-data-at-any-index" class="headerlink" title="Remove data at any index"></a>Remove data at any index</h2><p>When given index is greater than the total number of elements, instead of throwing an error, I decided to remove the last element by calling <code>pop_back</code>.</p>
+<p>When the index is somewhere between, I shift all the elements once to the left starting from the given <code>idx</code>.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">delete</span><span class="params">(Vector *vec, <span class="type">int</span> idx)</span> &#123;</span><br><span class="line">  <span class="keyword">if</span>(idx &gt;= vec-&gt;size) &#123;</span><br><span class="line">    <span class="keyword">return</span> pop_back(vec);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="type">int</span> data = (vec-&gt;arr)[idx];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=idx; i&lt;vec-&gt;size; ++i) &#123;</span><br><span class="line">    (vec-&gt;arr)[i] = (vec-&gt;arr)[i+<span class="number">1</span>];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  --(vec-&gt;size);</span><br><span class="line">  (vec-&gt;arr)[vec-&gt;size] = INF;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> data;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Remove-all-data-that-matches-the-given-value"><a href="#Remove-all-data-that-matches-the-given-value" class="headerlink" title="Remove all data that matches the given value"></a>Remove all data that matches the given value</h2><p>I used a temporary array to store all elements that isn’t the <code>value</code> to delete. </p>
+<p>As I iterate the array, I will have a separate index(<code>p</code>) which tracks down the element that we’re going to keep.<br>Eventually the <code>p</code> will become the total size after the removal.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">void</span> _remove(Vector *vec, <span class="type">int</span> value) &#123;</span><br><span class="line">  <span class="keyword">if</span>(is_empty(vec)) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="type">int</span> p = <span class="number">0</span>;</span><br><span class="line">  <span class="type">int</span> *temp = (<span class="type">int</span> *)(<span class="built_in">malloc</span>(vec-&gt;capacity * <span class="keyword">sizeof</span>(<span class="type">int</span>)));</span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec-&gt;size; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span>((vec-&gt;arr)[i] != data) &#123;</span><br><span class="line">      temp[p] = (vec-&gt;arr)[i]; </span><br><span class="line">      ++p;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  vec-&gt;size = p;</span><br><span class="line">  <span class="built_in">free</span>(vec-&gt;arr);</span><br><span class="line">  vec-&gt;arr = temp;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// if size is 1/4 of capacity, halve the capacity</span></span><br><span class="line">  <span class="type">int</span> quart = vec-&gt;capacity / <span class="number">4</span>;</span><br><span class="line">  <span class="keyword">if</span>(vec-&gt;capacity &gt; DEFAULT_SIZE &amp;&amp; vec-&gt;size &lt;= quart) &#123;</span><br><span class="line">    resize(vec, vec-&gt;capacity &gt;&gt; <span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Find-data"><a href="#Find-data" class="headerlink" title="Find data"></a>Find data</h2><p>Iterate the array and check if the data is what we’re looking for. If found, return that index else return <code>-1</code>.</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">find</span><span class="params">(Vector *vec, <span class="type">int</span> data)</span> &#123;</span><br><span class="line">  <span class="type">int</span> idx = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt;vec-&gt;size; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span>((vec-&gt;arr)[i] == data) &#123;</span><br><span class="line">      idx = i;</span><br><span class="line">      <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> idx;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+  </div>
+  
+    
+      <a id="older" class="blog-nav" href="/ko/python-numpy/">OLDER&nbsp;&gt;</a>
+      
+        
+          <a id="newer" class="blog-nav" href="/ko/boj/boj-steps-1/">&lt;&nbsp;NEWER</a>
+          
+            
+</div>
+        <div class="footer">
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Copyright © Leedom 2021</a>
+        
+    </div>
+  
+    <div class="footer-more">
+      
+        <a target="_blank" rel="noopener" href="https://github.com/leedom92/hexo-theme-leedom">Theme by Leedom | Powered by Hexo</a>
+        
+    </div>
+  
+</div>
+
+      </div>
+
+      <div class="back-to-top hidden">
+  <a href="javascript: void(0)">
+    <i class="iconfont icon-chevronup"></i>
+  </a>
+</div>
+
+
+<script src="/js/backtotop.js"></script>
+
+
+
+      
+  <div class="search-icon" id="search-icon">
+    <a href="javascript: void(0)">
+      <i class="iconfont icon-search"></i>
+    </a>
+  </div>
+
+  <div class="search-overlay hidden">
+    <div class="search-content" tabindex="0">
+      <div class="search-box">
+        <div class="search-title">
+          <!-- <span class="search-icon-input">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </span> -->
+          
+            <input type="text" class="search-input" id="search-input" placeholder="Search...">
+          
+          <span class="search-close-icon" id="search-close-icon">
+            <a href="javascript: void(0)">
+              <i class="iconfont icon-close"></i>
+            </a>
+          </span>
+        </div>
+        <div class="search-result" id="search-result"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var inputArea = document.querySelector("#search-input")
+    var searchOverlayArea = document.querySelector(".search-overlay")
+
+    // inputArea.onclick = function() {
+    //   getSearchFile()
+    //   this.onclick = null
+    // }
+
+    inputArea.onkeydown = function() {
+      if(event.keyCode == 13)
+        return false
+    }
+
+    function openOrHideSearchContent() {
+      let isHidden = searchOverlayArea.classList.contains('hidden')
+      if (isHidden) {
+        searchOverlayArea.classList.remove('hidden')
+        document.body.classList.add('hidden')
+        inputArea.focus()
+        getSearchFile()
+      } else {
+        searchOverlayArea.classList.add('hidden')
+        document.body.classList.remove('hidden')
+      }
+    }
+
+    function blurSearchContent(e) {
+      if (e.target === searchOverlayArea) {
+        openOrHideSearchContent()
+      }
+    }
+
+    document.querySelector("#search-icon").addEventListener("click", openOrHideSearchContent, false)
+    document.querySelector("#search-close-icon").addEventListener("click", openOrHideSearchContent, false)
+    searchOverlayArea.addEventListener("click", blurSearchContent, false)
+
+    var searchFunc = function (path, search_id, content_id) {
+      'use strict';
+      var $input = document.getElementById(search_id);
+      var $resultContent = document.getElementById(content_id);
+      $resultContent.innerHTML = "<ul><span class='local-search-empty'><span></ul>";
+      // $resultContent.innerHTML = "<ul><span class='local-search-empty'>First search, index file loading, please wait...<span></ul>";
+      $.ajax({
+        // 0x01. load xml file
+        url: path,
+        dataType: "xml",
+        success: function (xmlResponse) {
+          // 0x02. parse xml file
+          var datas = $("entry", xmlResponse).map(function () {
+            return {
+              title: $("title", this).text(),
+              content: $("content", this).text(),
+              url: $("url", this).text()
+            };
+          }).get();
+          $resultContent.innerHTML = "";
+
+          $input.addEventListener('input', function () {
+            // 0x03. parse query to keywords list
+            var str = '<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length <= 0) {
+              return;
+            }
+            // 0x04. perform local searching
+            datas.forEach(function (data) {
+              var isMatch = true;
+              var content_index = [];
+              if (!data.title || data.title.trim() === '') {
+                data.title = "Untitled";
+              }
+              var orig_data_title = data.title.trim();
+              var data_title = orig_data_title.toLowerCase();
+              var orig_data_content = data.content.trim().replace(/<[^>]+>/g, "");
+              var data_content = orig_data_content.toLowerCase();
+              var data_url = data.url;
+              var index_title = -1;
+              var index_content = -1;
+              var first_occur = -1;
+              // only match artiles with not empty contents
+              if (data_content !== '') {
+                keywords.forEach(function (keyword, i) {
+                  index_title = data_title.indexOf(keyword);
+                  index_content = data_content.indexOf(keyword);
+
+                  if (index_title < 0 && index_content < 0) {
+                    isMatch = false;
+                  } else {
+                    if (index_content < 0) {
+                      index_content = 0;
+                    }
+                    if (i == 0) {
+                      first_occur = index_content;
+                    }
+                    // content_index.push({index_content:index_content, keyword_len:keyword_len});
+                  }
+                });
+              } else {
+                isMatch = false;
+              }
+              // 0x05. show search results
+              if (isMatch) {
+                str += "<li><a href='/" + data_url + "' class='search-result-title'><h2>" + orig_data_title + "</h2></a>";
+                var content = orig_data_content;
+                if (first_occur >= 0) {
+                  // cut out 100 characters
+                  var start = first_occur - 20;
+                  var end = first_occur + 80;
+
+                  if (start < 0) {
+                    start = 0;
+                  }
+
+                  if (start == 0) {
+                    end = 100;
+                  }
+
+                  if (end > content.length) {
+                    end = content.length;
+                  }
+
+                  var match_content = content.substr(start, end);
+
+                  // highlight all keywords
+                  keywords.forEach(function (keyword) {
+                    var regS = new RegExp(keyword, "gi");
+                    match_content = match_content.replace(regS, "<span class=\"search-keyword\">" + keyword + "</span>");
+                  });
+
+                  str += "<h3 class=\"search-result-abstract\">" + match_content + "...</h3>"
+                }
+                str += "<hr></li>";
+              }
+            });
+            str += "</ul>";
+            if (str.indexOf('<li>') === -1) {
+              return $resultContent.innerHTML = "<ul><span class='local-search-empty'>No result<span></ul>";
+            }
+            $resultContent.innerHTML = str;
+          });
+        },
+        error: function(xhr, status, error) {
+          $resultContent.innerHTML = ""
+          if (xhr.status === 404) {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The search.xml file was not found, please refer to：<a href='https://github.com/leedom92/hexo-theme-leedom#configuration' target='_black'>configuration</a><span></ul>";
+          } else {
+            $resultContent.innerHTML = "<ul><span class='local-search-empty'>The request failed, Try to refresh the page or try again later.<span></ul>";
+          }
+        }
+      });
+      $(document).on('click', '#search-close-icon', function() {
+        $('#search-input').val('');
+        $('#search-result').html('');
+      });
+    }
+
+    var getSearchFile = function() {
+        var path = "/search.xml";
+        searchFunc(path, 'search-input', 'search-result');
+    }
+  </script>
+
+
+
+
+    </div>
+  </body>
+</html>

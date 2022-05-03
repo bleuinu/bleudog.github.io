@@ -6,7 +6,7 @@
   <link href="https://midotype.github.io/atom.xml" rel="self"/>
   
   <link href="https://midotype.github.io/"/>
-  <updated>2022-05-03T05:09:13.674Z</updated>
+  <updated>2022-05-03T17:47:00.540Z</updated>
   <id>https://midotype.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>What is an array?</title>
+    <link href="https://midotype.github.io/en/what-is-an-array/"/>
+    <id>https://midotype.github.io/en/what-is-an-array/</id>
+    <published>2022-05-03T17:27:57.000Z</published>
+    <updated>2022-05-03T17:47:00.540Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;Array&quot;&gt;&lt;a href=&quot;#Array&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Data Structure" scheme="https://midotype.github.io/categories/Data-Structure/"/>
+    
+    
+    <category term="array" scheme="https://midotype.github.io/tags/array/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git-filter-repo</title>
-    <link href="https://midotype.github.io/ko-git-filter-repo/"/>
-    <id>https://midotype.github.io/ko-git-filter-repo/</id>
+    <link href="https://midotype.github.io/ko/git-filter-repo/"/>
+    <id>https://midotype.github.io/ko/git-filter-repo/</id>
     <published>2022-05-03T04:45:35.000Z</published>
-    <updated>2022-05-03T05:09:13.674Z</updated>
+    <updated>2022-05-03T17:49:55.896Z</updated>
     
     
       
@@ -46,10 +71,10 @@
   
   <entry>
     <title>Change Author of Commit in Git History</title>
-    <link href="https://midotype.github.io/ko-change-author-of-commit-in-git-history/"/>
-    <id>https://midotype.github.io/ko-change-author-of-commit-in-git-history/</id>
+    <link href="https://midotype.github.io/ko/change-author-of-commit-in-git-history/"/>
+    <id>https://midotype.github.io/ko/change-author-of-commit-in-git-history/</id>
     <published>2022-05-03T03:35:14.000Z</published>
-    <updated>2022-05-03T04:46:13.301Z</updated>
+    <updated>2022-05-03T17:49:41.899Z</updated>
     
     
       
@@ -74,10 +99,10 @@
   
   <entry>
     <title>error: gpg failed to sign</title>
-    <link href="https://midotype.github.io/ko-gpg-failed-to-sign/"/>
-    <id>https://midotype.github.io/ko-gpg-failed-to-sign/</id>
+    <link href="https://midotype.github.io/ko/gpg-failed-to-sign/"/>
+    <id>https://midotype.github.io/ko/gpg-failed-to-sign/</id>
     <published>2022-04-05T14:00:04.000Z</published>
-    <updated>2022-05-03T01:58:33.411Z</updated>
+    <updated>2022-05-03T17:50:00.777Z</updated>
     
     
       
@@ -104,10 +129,10 @@
   
   <entry>
     <title>git commit 서명하기</title>
-    <link href="https://midotype.github.io/ko-signing-commits/"/>
-    <id>https://midotype.github.io/ko-signing-commits/</id>
+    <link href="https://midotype.github.io/ko/signing-commits/"/>
+    <id>https://midotype.github.io/ko/signing-commits/</id>
     <published>2022-04-05T13:20:15.000Z</published>
-    <updated>2022-05-03T02:01:06.139Z</updated>
+    <updated>2022-05-03T17:50:21.447Z</updated>
     
     
       
@@ -131,10 +156,10 @@
   
   <entry>
     <title>GPG key 생성하기</title>
-    <link href="https://midotype.github.io/ko-generate-new-gpg-key/"/>
-    <id>https://midotype.github.io/ko-generate-new-gpg-key/</id>
+    <link href="https://midotype.github.io/ko/generate-new-gpg-key/"/>
+    <id>https://midotype.github.io/ko/generate-new-gpg-key/</id>
     <published>2022-04-05T12:11:01.000Z</published>
-    <updated>2022-05-03T02:01:10.150Z</updated>
+    <updated>2022-05-03T17:49:51.904Z</updated>
     
     
       
@@ -159,10 +184,10 @@
   
   <entry>
     <title>BOJ 11: 정렬 (Sorting)</title>
-    <link href="https://midotype.github.io/boj/boj-steps-11/"/>
-    <id>https://midotype.github.io/boj/boj-steps-11/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-11/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-11/</id>
     <published>2022-03-25T13:33:46.000Z</published>
-    <updated>2022-05-03T01:58:33.408Z</updated>
+    <updated>2022-05-03T17:51:35.784Z</updated>
     
     
       
@@ -185,10 +210,10 @@
   
   <entry>
     <title>BOJ 10: 브루트포스 (Bruteforce) -- [4/5]</title>
-    <link href="https://midotype.github.io/boj/boj-steps-10/"/>
-    <id>https://midotype.github.io/boj/boj-steps-10/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-10/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-10/</id>
     <published>2022-03-24T13:27:31.000Z</published>
-    <updated>2022-05-03T01:58:33.408Z</updated>
+    <updated>2022-05-03T17:51:39.644Z</updated>
     
     
       
@@ -210,10 +235,10 @@
   
   <entry>
     <title>BOJ 09: 재귀 (Recursion) -- [3/4]</title>
-    <link href="https://midotype.github.io/boj/boj-steps-9/"/>
-    <id>https://midotype.github.io/boj/boj-steps-9/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-9/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-9/</id>
     <published>2022-03-23T13:20:55.000Z</published>
-    <updated>2022-05-03T01:58:33.409Z</updated>
+    <updated>2022-05-03T17:51:32.968Z</updated>
     
     
       
@@ -238,10 +263,10 @@
   
   <entry>
     <title>BOJ 06: 문자열 (Strings)</title>
-    <link href="https://midotype.github.io/boj/boj-steps-6/"/>
-    <id>https://midotype.github.io/boj/boj-steps-6/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-6/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-6/</id>
     <published>2022-03-21T13:13:32.000Z</published>
-    <updated>2022-05-03T01:58:33.409Z</updated>
+    <updated>2022-05-03T17:51:29.208Z</updated>
     
     
       
@@ -266,10 +291,10 @@
   
   <entry>
     <title>BOJ 05: 함수 (Functions)</title>
-    <link href="https://midotype.github.io/boj/boj-steps-5/"/>
-    <id>https://midotype.github.io/boj/boj-steps-5/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-5/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-5/</id>
     <published>2022-03-21T13:07:58.000Z</published>
-    <updated>2022-05-03T01:58:33.409Z</updated>
+    <updated>2022-05-03T17:51:26.751Z</updated>
     
     
       
@@ -286,11 +311,11 @@
     <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
     
     
+    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
+    
     <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
     
     <category term="math" scheme="https://midotype.github.io/tags/math/"/>
-    
-    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
     
     <category term="string" scheme="https://midotype.github.io/tags/string/"/>
     
@@ -298,10 +323,10 @@
   
   <entry>
     <title>BOJ 04: 1차원 배열 (1-D Array)</title>
-    <link href="https://midotype.github.io/boj/boj-steps-4/"/>
-    <id>https://midotype.github.io/boj/boj-steps-4/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-4/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-4/</id>
     <published>2022-03-21T12:59:37.000Z</published>
-    <updated>2022-05-03T01:58:33.409Z</updated>
+    <updated>2022-05-03T17:51:23.807Z</updated>
     
     
       
@@ -327,10 +352,10 @@
   
   <entry>
     <title>BOJ 03: 반복문 (Loops)</title>
-    <link href="https://midotype.github.io/boj/boj-steps-3/"/>
-    <id>https://midotype.github.io/boj/boj-steps-3/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-3/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-3/</id>
     <published>2022-03-21T12:47:48.000Z</published>
-    <updated>2022-05-03T01:58:33.408Z</updated>
+    <updated>2022-05-03T17:51:20.905Z</updated>
     
     
       
@@ -357,10 +382,10 @@
   
   <entry>
     <title>BOJ 02: 조건문 (Conditions)</title>
-    <link href="https://midotype.github.io/boj/boj-steps-2/"/>
-    <id>https://midotype.github.io/boj/boj-steps-2/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-2/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-2/</id>
     <published>2022-03-21T12:34:58.000Z</published>
-    <updated>2022-05-03T01:58:33.408Z</updated>
+    <updated>2022-05-03T17:51:17.682Z</updated>
     
     
       
@@ -387,10 +412,10 @@
   
   <entry>
     <title>BOJ 01: 입출력과 사칙연산 (STDIO &amp; Arithmetic)</title>
-    <link href="https://midotype.github.io/boj/boj-steps-1/"/>
-    <id>https://midotype.github.io/boj/boj-steps-1/</id>
+    <link href="https://midotype.github.io/ko/boj/boj-steps-1/"/>
+    <id>https://midotype.github.io/ko/boj/boj-steps-1/</id>
     <published>2022-03-21T12:21:41.000Z</published>
-    <updated>2022-05-03T01:58:33.408Z</updated>
+    <updated>2022-05-03T17:51:12.025Z</updated>
     
     
       
@@ -412,10 +437,10 @@
   
   <entry>
     <title>Implement Mutable Array: Vector</title>
-    <link href="https://midotype.github.io/en-implement-vector/"/>
-    <id>https://midotype.github.io/en-implement-vector/</id>
+    <link href="https://midotype.github.io/en/implement-vector/"/>
+    <id>https://midotype.github.io/en/implement-vector/</id>
     <published>2022-03-06T11:40:05.000Z</published>
-    <updated>2022-05-03T01:58:33.410Z</updated>
+    <updated>2022-05-03T17:49:15.873Z</updated>
     
     
       
@@ -438,10 +463,10 @@
   
   <entry>
     <title>파이썬으로 데이터 분석하기 - Numpy</title>
-    <link href="https://midotype.github.io/ko-python-numpy/"/>
-    <id>https://midotype.github.io/ko-python-numpy/</id>
+    <link href="https://midotype.github.io/ko/python-numpy/"/>
+    <id>https://midotype.github.io/ko/python-numpy/</id>
     <published>2022-01-31T03:00:00.000Z</published>
-    <updated>2022-05-03T01:58:33.411Z</updated>
+    <updated>2022-05-03T17:50:25.550Z</updated>
     
     
       
@@ -457,16 +482,18 @@
     <category term="Python" scheme="https://midotype.github.io/categories/Python/"/>
     
     
+    <category term="python" scheme="https://midotype.github.io/tags/python/"/>
+    
     <category term="numpy" scheme="https://midotype.github.io/tags/numpy/"/>
     
   </entry>
   
   <entry>
     <title>파이썬 기초 정리</title>
-    <link href="https://midotype.github.io/ko-python-basic/"/>
-    <id>https://midotype.github.io/ko-python-basic/</id>
+    <link href="https://midotype.github.io/ko/python-basic/"/>
+    <id>https://midotype.github.io/ko/python-basic/</id>
     <published>2022-01-30T03:00:00.000Z</published>
-    <updated>2022-05-03T01:58:33.411Z</updated>
+    <updated>2022-05-03T17:50:12.085Z</updated>
     
     
       
@@ -482,14 +509,16 @@
     <category term="Python" scheme="https://midotype.github.io/categories/Python/"/>
     
     
+    <category term="python" scheme="https://midotype.github.io/tags/python/"/>
+    
   </entry>
   
   <entry>
     <title>Big-O記法とは</title>
-    <link href="https://midotype.github.io/ja-algorithm-complexity/"/>
-    <id>https://midotype.github.io/ja-algorithm-complexity/</id>
+    <link href="https://midotype.github.io/ja/algorithm-complexity/"/>
+    <id>https://midotype.github.io/ja/algorithm-complexity/</id>
     <published>2021-05-03T03:00:00.000Z</published>
-    <updated>2022-05-03T01:58:33.410Z</updated>
+    <updated>2022-05-03T17:49:37.804Z</updated>
     
     
       
