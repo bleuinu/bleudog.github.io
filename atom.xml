@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mido Ryu (劉謎道)</title>
+  <title>Mido Eu (劉謎道)</title>
   <icon>https://midotype.github.io/icon.png</icon>
   
   <link href="https://midotype.github.io/atom.xml" rel="self"/>
@@ -10,7 +10,7 @@
   <id>https://midotype.github.io/</id>
   
   <author>
-    <name>Mido Ryu</name>
+    <name>Mido Eu</name>
     
   </author>
   
@@ -51,7 +51,7 @@
     <link href="https://midotype.github.io/ko-signing-commits/"/>
     <id>https://midotype.github.io/ko-signing-commits/</id>
     <published>2022-04-05T13:20:15.000Z</published>
-    <updated>2022-05-03T01:58:33.412Z</updated>
+    <updated>2022-05-03T02:01:06.139Z</updated>
     
     
       
@@ -78,7 +78,7 @@
     <link href="https://midotype.github.io/ko-generate-new-gpg-key/"/>
     <id>https://midotype.github.io/ko-generate-new-gpg-key/</id>
     <published>2022-04-05T12:11:01.000Z</published>
-    <updated>2022-05-03T01:58:33.410Z</updated>
+    <updated>2022-05-03T02:01:10.150Z</updated>
     
     
       

@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="" />
-  <meta name="author" content="Mido Ryu" />
-  <meta name="description" content="" />
+  <meta name="author" content="Mido Eu" />
+  <meta name="description" content="Frontend Engineer&#39;s study log" />
   
   
   <title>
@@ -50,7 +50,7 @@
 <script src="/js/fancybox.js"></script>
 
 
-<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Mido Ryu (劉謎道)" type="application/atom+xml">
+<meta name="generator" content="Hexo 6.1.0"><link rel="alternate" href="/atom.xml" title="Mido Eu (劉謎道)" type="application/atom+xml">
 </head>
 
 
@@ -113,7 +113,7 @@
     <h2 id="Signing-commits"><a href="#Signing-commits" class="headerlink" title="Signing commits"></a>Signing commits</h2><p>GPG key를 사용하여 커밋에 서명하는 것이 가능하다 – 오래된 커밋에 서명하는 방법은 <a target="_blank" rel="noopener" href="https://medium.com/@midotype/signing-previous-commits-787a077bdb62">여기</a>.</p>
 <p><img src="/images/posts/05042022-sign-commit-1.png" alt="Signed commits"></p>
 <p>우선 사용 할 GPG key ID를 정해야한다. <code>gpg --list-secret-keys --keyid-format=long</code> 명령어를 사용하여 등록되어 있는 GPG key들을 확인 할 수 있다.</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ gpg --list-secret-keys --keyid-format=long</span><br><span class="line"></span><br><span class="line">------------------------------------</span><br><span class="line">sec   4096R/SAMPLE4371567BD2 2016-03-10 [expires: 2023-04-05]</span><br><span class="line">uid                          Mido Ryu &lt;mido.ryu@pm.me&gt; </span><br><span class="line">ssb   4096R/42B317FD4BA89E7A 2016-03-10 [expires: 2023-04-05]</span><br><span class="line">------------------------------------</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ gpg --list-secret-keys --keyid-format=long</span><br><span class="line"></span><br><span class="line">------------------------------------</span><br><span class="line">sec   4096R/SAMPLE4371567BD2 2016-03-10 [expires: 2023-04-05]</span><br><span class="line">uid                          Mido Eu &lt;mido.eu@proton.me&gt; </span><br><span class="line">ssb   4096R/42B317FD4BA89E7A 2016-03-10 [expires: 2023-04-05]</span><br><span class="line">------------------------------------</span><br></pre></td></tr></table></figure>
 
 <p>여기는 하나의 GPG key만이 존재하기 때문에 해당 키를 사용한다.<br>4번째 줄의 <code>SAMPLE4371567BD2</code>가 GPG key ID이므로 이 값을 복사한다.</p>
 <p>해당 key로 커밋을 한다는 것을 git에 알려주어야 한다.</p>
