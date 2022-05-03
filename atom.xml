@@ -6,7 +6,7 @@
   <link href="https://midotype.github.io/atom.xml" rel="self"/>
   
   <link href="https://midotype.github.io/"/>
-  <updated>2022-05-03T17:47:00.540Z</updated>
+  <updated>2022-05-03T19:31:31.967Z</updated>
   <id>https://midotype.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://midotype.github.io/en/what-is-an-array/"/>
     <id>https://midotype.github.io/en/what-is-an-array/</id>
     <published>2022-05-03T17:27:57.000Z</published>
-    <updated>2022-05-03T17:47:00.540Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -46,7 +46,7 @@
     <link href="https://midotype.github.io/ko/git-filter-repo/"/>
     <id>https://midotype.github.io/ko/git-filter-repo/</id>
     <published>2022-05-03T04:45:35.000Z</published>
-    <updated>2022-05-03T17:49:55.896Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -74,7 +74,7 @@
     <link href="https://midotype.github.io/ko/change-author-of-commit-in-git-history/"/>
     <id>https://midotype.github.io/ko/change-author-of-commit-in-git-history/</id>
     <published>2022-05-03T03:35:14.000Z</published>
-    <updated>2022-05-03T17:49:41.899Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -102,7 +102,7 @@
     <link href="https://midotype.github.io/ko/gpg-failed-to-sign/"/>
     <id>https://midotype.github.io/ko/gpg-failed-to-sign/</id>
     <published>2022-04-05T14:00:04.000Z</published>
-    <updated>2022-05-03T17:50:00.777Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -132,7 +132,7 @@
     <link href="https://midotype.github.io/ko/signing-commits/"/>
     <id>https://midotype.github.io/ko/signing-commits/</id>
     <published>2022-04-05T13:20:15.000Z</published>
-    <updated>2022-05-03T17:50:21.447Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -159,7 +159,7 @@
     <link href="https://midotype.github.io/ko/generate-new-gpg-key/"/>
     <id>https://midotype.github.io/ko/generate-new-gpg-key/</id>
     <published>2022-04-05T12:11:01.000Z</published>
-    <updated>2022-05-03T17:49:51.904Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -187,7 +187,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-11/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-11/</id>
     <published>2022-03-25T13:33:46.000Z</published>
-    <updated>2022-05-03T17:51:35.784Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -213,7 +213,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-10/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-10/</id>
     <published>2022-03-24T13:27:31.000Z</published>
-    <updated>2022-05-03T17:51:39.644Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -238,7 +238,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-9/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-9/</id>
     <published>2022-03-23T13:20:55.000Z</published>
-    <updated>2022-05-03T17:51:32.968Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -266,7 +266,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-6/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-6/</id>
     <published>2022-03-21T13:13:32.000Z</published>
-    <updated>2022-05-03T17:51:29.208Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -294,7 +294,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-5/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-5/</id>
     <published>2022-03-21T13:07:58.000Z</published>
-    <updated>2022-05-03T17:51:26.751Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -311,9 +311,9 @@
     <category term="Baekjoon" scheme="https://midotype.github.io/categories/Baekjoon/"/>
     
     
-    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
-    
     <category term="implementation" scheme="https://midotype.github.io/tags/implementation/"/>
+    
+    <category term="bruteforce" scheme="https://midotype.github.io/tags/bruteforce/"/>
     
     <category term="math" scheme="https://midotype.github.io/tags/math/"/>
     
@@ -326,7 +326,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-4/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-4/</id>
     <published>2022-03-21T12:59:37.000Z</published>
-    <updated>2022-05-03T17:51:23.807Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -355,7 +355,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-3/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-3/</id>
     <published>2022-03-21T12:47:48.000Z</published>
-    <updated>2022-05-03T17:51:20.905Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -385,7 +385,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-2/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-2/</id>
     <published>2022-03-21T12:34:58.000Z</published>
-    <updated>2022-05-03T17:51:17.682Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -415,7 +415,7 @@
     <link href="https://midotype.github.io/ko/boj/boj-steps-1/"/>
     <id>https://midotype.github.io/ko/boj/boj-steps-1/</id>
     <published>2022-03-21T12:21:41.000Z</published>
-    <updated>2022-05-03T17:51:12.025Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -440,7 +440,7 @@
     <link href="https://midotype.github.io/en/implement-vector/"/>
     <id>https://midotype.github.io/en/implement-vector/</id>
     <published>2022-03-06T11:40:05.000Z</published>
-    <updated>2022-05-03T17:49:15.873Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -466,7 +466,7 @@
     <link href="https://midotype.github.io/ko/python-numpy/"/>
     <id>https://midotype.github.io/ko/python-numpy/</id>
     <published>2022-01-31T03:00:00.000Z</published>
-    <updated>2022-05-03T17:50:25.550Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -493,7 +493,7 @@
     <link href="https://midotype.github.io/ko/python-basic/"/>
     <id>https://midotype.github.io/ko/python-basic/</id>
     <published>2022-01-30T03:00:00.000Z</published>
-    <updated>2022-05-03T17:50:12.085Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
@@ -518,7 +518,7 @@
     <link href="https://midotype.github.io/ja/algorithm-complexity/"/>
     <id>https://midotype.github.io/ja/algorithm-complexity/</id>
     <published>2021-05-03T03:00:00.000Z</published>
-    <updated>2022-05-03T17:49:37.804Z</updated>
+    <updated>2022-05-03T19:31:31.967Z</updated>
     
     
       
